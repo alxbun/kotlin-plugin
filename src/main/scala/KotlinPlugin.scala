@@ -1,8 +1,8 @@
 package kotlin
 
-import Keys.*
-import sbt.{Keys as _, *}
-import sbt.Keys.*
+import Keys._
+import sbt._
+import sbt.Keys._
 import sbt.plugins.JvmPlugin
 
 /**
