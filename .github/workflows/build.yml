@@ -23,4 +23,4 @@ jobs:
           java-version: '8'
           cache: 'sbt'
       - name: Execute sbt build
-        run: sbt ^scripted
+        run: sbt compile scripted
