@@ -34,8 +34,8 @@ object KotlinPlugin extends AutoPlugin {
       "org.jetbrains.kotlin" % "kotlin-compiler-embeddable" % kotlinVersion.value % KotlinInternal.name
     ) ++ kotlinScriptCompilerDeps(kotlinVersion.value),
     KotlinInternal / managedClasspath := Classpaths.managedJars(KotlinInternal, classpathTypes.value, update.value),
-    kotlinVersion := "1.3.50",
-    kotlincJvmTarget := "1.8",
+    kotlinVersion := "1.8.21",
+    kotlincJvmTarget := "11",
     kotlincOptions := Nil,
     kotlincPluginOptions := Nil,
     watchSources     ++= {
