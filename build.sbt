@@ -1,6 +1,6 @@
 name := "kotlin-plugin"
 organization := "io.gatling"
-version := "2.0.2-SNAPSHOT"
+version := "2.0.3-SNAPSHOT"
 
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 homepage := Some(url("https://gatling.io"))
@@ -36,3 +36,5 @@ publishMavenStyle := true
 sonatypeProfileName := "io.gatling"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
 publishTo := sonatypePublishToBundle.value
+
+resolvers += Resolver.mavenLocal
