@@ -29,6 +29,9 @@ object Keys {
   def kotlinPlugin(name: String) = sbt.Keys.libraryDependencies +=
     "org.jetbrains.kotlin" % ("kotlin-" + name) % kotlinVersion.value % "compile-internal"
 
+  def kotlinLombokPlugin() = sbt.Keys.libraryDependencies +=
+    "org.jetbrains.kotlin" % "kotlin-lombok" % kotlinVersion.value % "compile-internal" intransitive()
+
   def kotlinClasspath(config: Configuration, classpathKey: Def.Initialize[sbt.Keys.Classpath]): Setting[_] =
     config / kotlincOptions ++= {
     "-cp" :: classpathKey.value.map(_.data.getAbsolutePath).mkString(
