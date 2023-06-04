@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - sbt-downgrade
   pull_request:
 
 concurrency:
