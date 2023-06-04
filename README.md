@@ -1,4 +1,4 @@
-# Sbt Kotlin plugin [![Build Status](https://github.com/gatling/kotlin-plugin/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/gatling/kotlin-plugin/actions/workflows/build.yml?query=branch%3Amaster)
+# Sbt Kotlin plugin [![Build Status](https://github.com/alxbun/kotlin-plugin/actions/workflows/build.yml/badge.svg?branch=sbt-downgrade)](https://github.com/alxbun/kotlin-plugin/actions/workflows/build.yml?query=branch%3Asbt-downgrade)
 
 Build kotlin code using sbt
 
