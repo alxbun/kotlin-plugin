@@ -1,19 +1,15 @@
 name := "kotlin-plugin"
-organization := "io.gatling"
+organization := "com.github.alxbun"
 version := "2.0.3-SNAPSHOT"
 
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-homepage := Some(url("https://gatling.io"))
+homepage := Some(url("https://github.com/alxbun/kotlin-plugin"))
 scmInfo := Some(
   ScmInfo(
-    url("https://github.com/gatling/kotlin-plugin"),
-    "scm:git:https://github.com/gatling/kotlin-plugin.git",
-    "scm:git:git@github.com/gatling/kotlin-plugin.git"
+    url("https://github.com/alxbun/kotlin-plugin"),
+    "scm:git:https://github.com/alxbun/kotlin-plugin.git",
+    "scm:git:git@github.com/alxbun/kotlin-plugin.git"
   )
-)
-developers := List(
-  Developer("slandelle@gatling.io", "Stephane Landelle", "slandelle@gatling.io", url("https://gatling.io")),
-  Developer("ggaly@gatling.io", "Guillaume Galy", "ggaly@gatling.io", url("https://gatling.io")),
 )
 
 sbtPlugin := true
@@ -33,7 +29,7 @@ scriptedLaunchOpts ++= Seq(
 
 // Publishing
 publishMavenStyle := true
-sonatypeProfileName := "io.gatling"
+sonatypeProfileName := "com.github.alxbun"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
 publishTo := sonatypePublishToBundle.value
 

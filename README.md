@@ -6,8 +6,9 @@ Current version 2.0.1
 
 ## Usage
 
-* for sbt 1.0.0+ `addSbtPlugin("com.hanhuy.sbt" % "kotlin-plugin" % "2.0.1")`
-* for sbt 0.13.x `addSbtPlugin("com.hanhuy.sbt" % "kotlin-plugin" % "1.0.9")`
+* add following in project/plugins.sbt:
+  * resolvers += "jitpack" at "https://jitpack.io"
+  * libraryDependencies += "com.github.alxbun" % "kotlin-plugin" % "2.0.3-SNAPSHOT"
 * Kotlin code will build automatically from `src/XXX/kotlin`
 * If necessary, add `kotlinLib("stdlib")`, it is not included by default.
   * Loading standard kotlin libraries and plugins: use `kotlinLib(NAME)` as
