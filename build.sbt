@@ -1,3 +1,5 @@
+import sbt.io.Path.userHome
+
 name := "kotlin-plugin"
 organization := "com.github.alxbun"
 version := "2.0.3-sbt-1.3"
@@ -11,6 +13,14 @@ scmInfo := Some(
     "scm:git:git@github.com/alxbun/kotlin-plugin.git"
   )
 )
+
+lazy val LocalMavenResolverForSbtPlugins = {
+  // remove scala and sbt versions from the path, as it does not work with jitpack
+  val pattern  = "[organisation]/[module]/[revision]/[module]-[revision](-[classifier]).[ext]"
+  val name     = "local-maven-for-sbt-plugins"
+  val location = userHome / ".m2" / "repository"
+  Resolver.file(name, location)(Patterns().withArtifactPatterns(Vector(pattern)))
+}
 
 sbtPlugin := true
 scalacOptions ++= Seq("-deprecation","-Xlint","-feature")
@@ -29,8 +39,7 @@ scriptedLaunchOpts ++= Seq(
 
 // Publishing
 publishMavenStyle := true
-sonatypeProfileName := "com.github.alxbun"
-sonatypeCredentialHost := "s01.oss.sonatype.org"
-publishTo := sonatypePublishToBundle.value
+resolvers += LocalMavenResolverForSbtPlugins
+publishM2Configuration := publishM2Configuration.value.withResolverName(LocalMavenResolverForSbtPlugins.name)
 
 resolvers += Resolver.mavenLocal
