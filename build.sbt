@@ -1,6 +1,6 @@
 name := "kotlin-plugin"
 organization := "com.github.alxbun"
-version := "2.0.3-SNAPSHOT"
+version := "2.0.3-sbt-1.3"
 
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 homepage := Some(url("https://github.com/alxbun/kotlin-plugin"))
